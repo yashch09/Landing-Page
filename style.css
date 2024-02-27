@@ -1,0 +1,151 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+  }
+  
+  h1, h2 {
+    margin-bottom: 10px;
+  }
+  
+  #task-form {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #task-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #task-form input, #task-form select, #task-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #task-list {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  #task-list-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-item .title {
+    font-weight: bold;
+  }
+  
+  .task-item .category,
+  .task-item .deadline,
+  .task-item .priority,
+  .task-item .labels {
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+  
+  .high-priority {
+    color: red;
+  }
+  
+  .medium-priority {
+    color: orange;
+  }
+  
+  .urgent {
+    font-weight: bold;
+  }
+  /* Existing styles are included */
+
+.task-item {
+  /* Existing styles are included */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item .progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+}
+
+.task-item .progress-bar .progress {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.5s ease-in-out;
+}
+
+.high-priority .progress {
+  background-color: #F44336;
+}
+
+.medium-priority .progress {
+  background-color: #FF9800;
+}
+/* Existing styles are included */
+
+.completed {
+  background-color: #ddd;
+  text-decoration: line-through;
+}
+
+#charts-section {
+  margin-top: 20px;
+}
+
+#charts-section canvas {
+  width: 400px;
+  height: 250px;
+  margin: 10px;
+}
+body {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text */
+}
+
+h1, h2, h3 {
+  color: #222; /* Darker gray for headings */
+}
+
+.primary-button {
+  background-color: #007bff; /* Primary blue button */
+  color: #fff; /* White text */
+}
+body {
+  font-family: Arial, sans-serif; /* Base font */
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif; /* Heading font */
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5; /* Adjust line height for spacing */
+}
+@media (max-width: 768px) {
+  .content-container {
+    width: 100%; /* Make content fill the width on smaller screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    max-width: 800px; /* Limit content width on larger screens */
+    margin: 0 auto; /* Center content horizontally */
+  }
+}

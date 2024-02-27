@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Website Task Management</h1>
+
+    <div id="task-form">
+        <h2>Add New Task</h2>
+        <form id="task-form-submit">
+            <label for="task-title">Title:</label>
+            <input type="text" id="task-title" name="title" required>
+
+            <label for="task-description">Description:</label>
+            <textarea id="task-description" name="description"></textarea>
+
+            <label for="task-category">Category:</label>
+            <select id="task-category" name="category">
+                <option value="content">Content</option>
+                <option value="design">Design</option>
+                <option value="development">Development</option>
+            </select>
+
+            <label for="task-deadline">Deadline:</label>
+            <input type="date" id="task-deadline" name="deadline" required>
+
+            <label for="task-priority">Priority:</label>
+            <select id="task-priority" name="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <label>Labels:</label>
+            <div id="label-container">
+                <input type="checkbox" id="label-urgent" name="labels[]" value="urgent">
+                <label for="label-urgent">Urgent</label>
+
+                <input type="checkbox" id="label-bug" name="labels[]" value="bug">
+                <label for="label-bug">Bug</label>
+            </div>
+
+            <label for="task-progress">Progress (%)</label>
+            <input type="number" id="task-progress" name="progress" min="0" max="100" value="0">
+
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+
+    <div id="task-list">
+        <h2>Tasks</h2>
+        <ul id="task-list-items"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Task Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> </head>
+<body>
+    <h1>Website Task Management</h1>
+
+    <div id="task-form">
+        <h2>Add New Task</h2>
+        <form id="task-form-submit">
+            <label for="task-progress">Progress (%)</label>
+            <input type="number" id="task-progress" name="progress" min="0" max="100" value="0">
+
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+
+    <div id="task-list">
+        <h2>Tasks</h2>
+        <ul id="task-list-items"></ul>
+    </div>
+
+    <div id="charts-section">
+        <h2>Progress and Completion Charts</h2>
+        <canvas id="task-completion-chart"></canvas>
+        <canvas id="task-category-chart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
